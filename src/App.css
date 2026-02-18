@@ -1,0 +1,107 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: #eee;
+  font-family: system-ui, -apple-system, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.phone-screen {
+  width: 100%;
+  max-width: 420px;           /* شبیه عرض گوشی */
+  margin: 0 auto;
+  height: 100vh;
+  background: white;
+  border: 1px solid #333;
+  border-radius: 36px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl;
+}
+
+/* اسپینر اصلی (صفحه اول) */
+.spinner-container {
+  text-align: center;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 6px solid #333;
+  border-top: 6px solid #4ade80;
+  border-radius: 50%;
+  animation: spin 1.1s linear infinite;
+  margin: 0 auto 24px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 1.3rem;
+  color: #aaa;
+}
+
+/* فاز درخواست */
+.requesting {
+  text-align: center;
+  color: #bbb;
+}
+
+.small-spinner {
+  width: 42px;
+  height: 42px;
+  border: 5px solid #222;
+  border-top: 5px solid #60a5fa;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  margin: 0 auto 16px;
+}
+
+.requesting p {
+  font-size: 1.2rem;
+}
+
+/* موفق */
+.success {
+  text-align: center;
+  color: #4ade80;
+  font-size: 1.8rem;
+}
+
+.checkmark {
+  font-size: 5.5rem;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+/* رد شده یا خطا */
+.denied, .error {
+  text-align: center;
+  color: #f87171;
+  font-size: 1.3rem;
+  padding: 0 32px;
+}
+
+/* برای گوشی‌های واقعی بهتر دیده بشه */
+@media (max-width: 500px) {
+  .phone-screen {
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
