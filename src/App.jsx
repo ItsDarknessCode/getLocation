@@ -66,7 +66,7 @@ function App() {
       {phase === 'requesting' && (
         <div className="requesting">
           <div className="small-spinner"></div>
-          <p>در حال گرفتن اطلاعات</p>
+          <p>در حال گرفتن اطلاعات از سمت سرور</p>
         </div>
       )}
 
